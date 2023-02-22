@@ -44,6 +44,12 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 
+;; Show one week list in org agenda view
+(after! org-agenda
+  (setq org-agenda-start-day "-1d")
+  (setq org-agenda-span 7)
+  (setq org-agenda-start-on-weekday 1))
+
 ;; start every frame maximized
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
