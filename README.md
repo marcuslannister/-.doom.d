@@ -1,2 +1,2 @@
-# -.doom.d
-My simple .doom.d file
+# .doom.d
+My simple .doom.d files.
