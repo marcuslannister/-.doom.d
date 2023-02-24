@@ -48,7 +48,9 @@
 (after! org-agenda
   (setq org-agenda-start-day "-1d")
   (setq org-agenda-span 7)
-  (setq org-agenda-start-on-weekday 1))
+  (setq org-agenda-start-on-weekday 1)
+  (setq org-agenda-clockreport-parameter-plist
+      (quote (:maxlevel 5 :fileskip0 t :compact t :narrow 80 :formula % ))))
 
 ;; start every frame maximized
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
