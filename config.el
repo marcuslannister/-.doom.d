@@ -66,6 +66,10 @@
 
 (setq magit-ediff-dwim-show-on-hunks t)
 
+(map! :leader
+      :desc "dired"
+      "d i" #'dired)
+
 (require 'denote)
 
 ;; Remember to check the doc strings of those variables.
