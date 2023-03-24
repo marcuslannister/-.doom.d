@@ -70,7 +70,13 @@
       :desc "dired"
       "d i" #'dired)
 
-(define-key evil-normal-state-map (kbd "SPC z f") 'zoxide-find-file)
+(map! :leader
+      (:prefix-map ("z" . "zoxide")
+       :desc "find file under a path saved in zoxide" "f" #'zoxide-find-file
+       :desc "change working directory to a path" "c" #'zoxide-cd))
+
+;; (define-key evil-normal-state-map (kbd "SPC z f") 'zoxide-find-file)
+
 (defun dired-jump-with-zoxide (&optional other-window)
    (interactive "P")
    (zoxide-open-with nil (lambda (file) (dired-jump other-window file)) t))
