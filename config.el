@@ -79,10 +79,8 @@
 ;; Pick dates, where relevant, with Org's advanced interface:
 (setq denote-date-prompt-use-org-read-date t)
 
-
 ;; Read this manual for how to specify `denote-templates'.  We do not
 ;; include an example here to avoid potential confusion.
-
 
 ;; We allow multi-word keywords by default.  The author's personal
 ;; preference is for single-word keywords for a more rigid workflow.
@@ -165,6 +163,9 @@
 
 ;; Also check the commands `denote-link-after-creating',
 ;; `denote-link-or-create'.  You may want to bind them to keys as well.
+
+(require 'evil-commentary)
+(setq evil-commentary-mode t)
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
