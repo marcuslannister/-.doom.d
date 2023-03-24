@@ -62,6 +62,7 @@
 
 (setq default-directory "~/org")
 
+(setq dired-listing-switches "-lt")
 
 (require 'denote)
 
