@@ -70,6 +70,11 @@
       :desc "dired"
       "d i" #'dired)
 
+(define-key evil-normal-state-map (kbd "SPC z f") 'zoxide-find-file)
+(defun dired-jump-with-zoxide (&optional other-window)
+   (interactive "P")
+   (zoxide-open-with nil (lambda (file) (dired-jump other-window file)) t))
+
 (require 'denote)
 
 ;; Remember to check the doc strings of those variables.

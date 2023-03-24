@@ -51,3 +51,4 @@
 
 (package! denote)
 (package! evil-commentary)
+(package! zoxide)
