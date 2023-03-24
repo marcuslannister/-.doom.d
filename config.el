@@ -64,6 +64,8 @@
 
 (setq dired-listing-switches "-lt")
 
+(setq magit-ediff-dwim-show-on-hunks t)
+
 (require 'denote)
 
 ;; Remember to check the doc strings of those variables.
