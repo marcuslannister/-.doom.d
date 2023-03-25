@@ -52,6 +52,8 @@
   (setq org-agenda-clockreport-parameter-plist
       (quote (:maxlevel 5 :fileskip0 t :compact t :narrow 80 :formula % ))))
 
+(setq org-pomodoro-play-sounds nil)
+
 ;; start every frame maximized
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
