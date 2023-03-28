@@ -64,7 +64,8 @@
 
 (setq default-directory "~/org")
 
-(setq dired-listing-switches "-lt")
+(after! dired
+  (setq dired-listing-switches "-lt --time-style=long-iso"))
 
 (setq magit-ediff-dwim-show-on-hunks t)
 
