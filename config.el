@@ -76,6 +76,7 @@
 (map! :leader
       (:prefix-map ("z" . "zoxide")
        :desc "find file under a path saved in zoxide" "f" #'zoxide-find-file
+       :desc "travel to a path saved in zoxide" "t" #'zoxide-travel
        :desc "change working directory to a path" "c" #'zoxide-cd))
 
 ;; (define-key evil-normal-state-map (kbd "SPC z f") 'zoxide-find-file)
