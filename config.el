@@ -79,11 +79,13 @@
        :desc "travel to a path saved in zoxide" "t" #'zoxide-travel
        :desc "change working directory to a path" "c" #'zoxide-cd))
 
-;; (define-key evil-normal-state-map (kbd "SPC z f") 'zoxide-find-file)
-
 (defun dired-jump-with-zoxide (&optional other-window)
    (interactive "P")
    (zoxide-open-with nil (lambda (file) (dired-jump other-window file)) t))
+
+(defun bb/evil-delete (orig-fn beg end &optional type _ &rest args)
+      (apply orig-fn beg end type ?_ args))
+(advice-add 'evil-delete :around 'bb/evil-delete)
 
 (require 'denote)
 
