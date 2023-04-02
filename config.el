@@ -190,6 +190,11 @@
 (require 'evil-commentary)
 (setq evil-commentary-mode t)
 
+(set-selection-coding-system
+   (if (eq system-type 'windows-nt)
+       'gbk
+       'utf-8))
+
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
 ;;
