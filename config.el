@@ -87,6 +87,10 @@
       (apply orig-fn beg end type ?_ args))
 (advice-add 'evil-delete :around 'bb/evil-delete)
 
+(map! :leader
+      :desc "kill line"
+      "d d" #'kill-line)
+
 (require 'denote)
 
 ;; Remember to check the doc strings of those variables.
@@ -186,6 +190,10 @@
 
 ;; Also check the commands `denote-link-after-creating',
 ;; `denote-link-or-create'.  You may want to bind them to keys as well.
+
+(map! :leader
+      :desc "denote creat a new denote" "d n" #'denote
+      :desc "denote rename file" "d r" #'denote-rename-file)
 
 (require 'evil-commentary)
 (setq evil-commentary-mode t)
