@@ -54,6 +54,8 @@
 
 (setq org-pomodoro-play-sounds nil)
 
+(run-at-time "5 min" (* 5 60) #'org-agenda-redo)
+
 ;; start every frame maximized
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
