@@ -52,3 +52,4 @@
 (package! denote)
 (package! evil-commentary)
 (package! zoxide)
+(package! org-journal)
