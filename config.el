@@ -207,6 +207,17 @@
 
 (require 'org-journal)
 
+(setq org-journal-dir "~/org/journal/")
+(setq org-journal-file-type 'weekly)
+(setq org-journal-file-format "%Y%mW%V.org")
+(setq org-journal-date-format "%A, %Y/%m/%d")
+(map! :leader
+      :desc "org-journal creat a entry" "j n" #'org-journal-new-entry
+      :desc "org-journal open current journal file" "j o" #'org-journal-open-current-journal-file)
+
+(map! :leader
+      :desc "emacs restart" "e r" #'restart-emacs)
+
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
 ;;
