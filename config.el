@@ -218,6 +218,8 @@
 (map! :leader
       :desc "emacs restart" "e r" #'restart-emacs)
 
+(require 'markdown-mode)
+
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
 ;;
