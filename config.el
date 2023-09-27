@@ -220,6 +220,26 @@
 
 (require 'markdown-mode)
 
+;; For MacOS
+(sis-ism-lazyman-config
+
+ ;; English input source may be: "ABC", "US" or another one.
+ ;; "com.apple.keylayout.ABC"
+ "com.apple.keylayout.ABC"
+
+ ;; Other language input source: "rime", "sogou" or another one.
+ ;; "im.rime.inputmethod.Squirrel.Rime"
+ "com.apple.inputmethod.SCIM.Shuangpin")
+
+;; enable the /cursor color/ mode
+;; (sis-global-cursor-color-mode t)
+;; enable the /respect/ mode
+(sis-global-respect-mode t)
+;; enable the /context/ mode for all buffers
+(sis-global-context-mode t)
+;; enable the /inline english/ mode for all buffers
+(sis-global-inline-mode t)
+
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
 ;;

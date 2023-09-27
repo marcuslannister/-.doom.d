@@ -54,3 +54,4 @@
 (package! zoxide)
 (package! org-journal)
 (package! markdown-mode)
+(package! sis)
