@@ -55,3 +55,4 @@
 (package! org-journal)
 (package! markdown-mode)
 (package! sis)
+(package! go-translate)

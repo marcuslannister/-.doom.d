@@ -240,6 +240,16 @@
 ;; enable the /inline english/ mode for all buffers
 (sis-global-inline-mode t)
 
+(require 'go-translate)
+
+(setq gts-translate-list '(("en" "zh")))
+;; (setq gts-default-translator (gts-translator :engines (gts-bing-engine)))
+(setq gts-default-translator
+      (gts-translator
+       :picker (gts-prompt-picker)
+       :engines (list (gts-bing-engine) (gts-google-engine))
+       :render (gts-buffer-render)))
+
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
 ;;
