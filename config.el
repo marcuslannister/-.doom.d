@@ -130,9 +130,7 @@
 
 ;; We use different ways to specify a path for demo purposes.
 (setq denote-dired-directories
-      (list denote-directory
-            (thread-last denote-directory (expand-file-name "attachments"))
-            (expand-file-name "~/Documents/books")))
+      (list denote-directory (thread-last denote-directory (expand-file-name "attachments")) (expand-file-name "~/Documents/books")))
 
 ;; Generic (great if you rename files Denote-style in lots of places):
 ;; (add-hook 'dired-mode-hook #'denote-dired-mode)
@@ -249,6 +247,13 @@
        :picker (gts-prompt-picker)
        :engines (list (gts-bing-engine) (gts-google-engine))
        :render (gts-buffer-render)))
+
+(map! :map org-mode-map
+      :localleader
+      :prefix ("h" . "heading")
+
+      :desc "insert heading" "i h" #'org-insert-heading
+      :desc "insert subheading" "i s" #'org-insert-subheading)
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
