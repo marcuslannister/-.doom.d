@@ -215,7 +215,7 @@
 (setq org-journal-date-format "%A, %Y/%m/%d")
 (setq org-journal-time-format "%Y%m%dT%H%M")
 (setq org-journal-enable-agenda-integration t)
-(setq org-journal-carryover-items "TODO=\"TODO\"|TODO=\"STRT\"")
+(setq org-journal-carryover-items "TODO=\"TODO\"|TODO=\"STRT\"|TODO=\"WAIT\"")
 (map! :leader
       :desc "org-journal creat a entry" "j n" #'org-journal-new-entry
       :desc "org-journal open current journal file" "j o" #'org-journal-open-current-journal-file)
