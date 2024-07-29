@@ -265,6 +265,15 @@
 (map! :map dired-mode-map
       :n "K" #'dired-do-kill-lines)
 
+(defun insert-timestamp ()
+  "Insert current timestamp in format YYYYMMDDTHHMM."
+  (interactive)
+  (insert (format-time-string "%Y%m%dT%H%M")))
+
+(map! :map org-mode-map
+      :localleader
+      :desc "insert timestamp" ";" #'insert-timestamp)
+
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
 ;;
